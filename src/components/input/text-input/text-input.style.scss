@@ -1,0 +1,44 @@
+@import "../../../assets/styles/variables.style";
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+
+  margin: 30px 0;
+
+  label {
+    @include font-text();
+  }
+
+  input {
+    @include font-sub-text();
+
+    padding: 7px 15px;
+
+    border-radius: 5px;
+    border: 1px solid $color-gray-1;
+
+    background-color: $color-gray-3;
+
+    &::placeholder {
+      @include font-sub-text();
+
+      color: $color-gray-2;
+    }
+
+    &:focus {
+      outline: 1px solid $color-black;
+    }
+  }
+
+  .error-message {
+    border-color: $color-red-1;
+  }
+
+  span {
+    @include font-small-text();
+
+    margin-left: 7px;
+    color: $color-red-1;
+  }
+}
