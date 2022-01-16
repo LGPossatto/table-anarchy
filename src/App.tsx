@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CtaButton } from "./components/button/CtaButton.component";
 import { TextInput } from "./components/input/text-input/TextInput.component";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         type="email"
         placeholder="placeholder"
       ></TextInput>
+      <CtaButton text={"Button"} onClick={() => console.log("ok")}></CtaButton>
     </div>
   );
 }
