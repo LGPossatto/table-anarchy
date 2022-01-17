@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { CtaButton } from "./components/button/CtaButton.component";
-import { TextInput } from "./components/input/text-input/TextInput.component";
+import { CtaButton } from "./components/buttons/CtaButton.component";
+import { TextInput } from "./components/inputs/text-input/TextInput.component";
 
 function App() {
   const [value, setValue] = useState("");

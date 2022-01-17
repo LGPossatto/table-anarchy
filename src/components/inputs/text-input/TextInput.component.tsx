@@ -1,4 +1,3 @@
-import { text } from "node:stream/consumers";
 import "./text-input.style.scss";
 
 interface props {
