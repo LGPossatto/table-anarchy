@@ -1,25 +1,25 @@
+import { Link } from "react-router-dom";
+
 import "./text-card.style.scss";
 import { HeartBtn } from "../../buttons/heart-btn/HeartBtn.component";
+import { ProfileInfo } from "../../profile-info/ProfileInfo.component";
 
 interface props {
   profile: { img: string; name: string; login: string };
   desc: string;
+  href: string;
 }
 
-export const TextCard = ({ profile, desc }: props) => {
+export const TextCard = ({ profile, desc, href }: props) => {
   return (
     <div className="img-card">
       <div className="img-card-ribbon">
-        <div className="img-card__profile">
-          <div className="img-box">
-            <img src={profile.img} alt="profile" />
-          </div>
-          <h3>{profile.name}</h3>
-          <span>{profile.login}</span>
-        </div>
+        <ProfileInfo {...profile}></ProfileInfo>
         <HeartBtn onClick={() => console.log("heart btn")}></HeartBtn>
       </div>
-      <div className="img-card__desc">{desc && <p>{desc}</p>}</div>
+      <Link to={href}>
+        <div className="img-card__desc">{desc && <p>{desc}</p>}</div>
+      </Link>
     </div>
   );
 };
