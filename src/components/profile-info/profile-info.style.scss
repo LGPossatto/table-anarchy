@@ -1,0 +1,38 @@
+@import "../../assets/styles/variables.style";
+
+.profile-info {
+  display: flex;
+
+  & .img-box {
+    overflow: hidden;
+
+    width: 50px;
+    height: 50px;
+
+    margin: 7px;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .text-box {
+    h3 {
+      @include font-text-bold();
+      margin-top: 7px;
+    }
+
+    span {
+      @include font-sub-text();
+
+      display: block;
+    }
+
+    h3,
+    span {
+      color: $color-white;
+    }
+  }
+}

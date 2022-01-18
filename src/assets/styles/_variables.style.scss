@@ -56,6 +56,12 @@ $font-main: "Roboto", sans-serif;
   line-height: 18px;
 }
 
+@mixin font-sub-text-bold {
+  @include font-sub-text();
+
+  font-weight: 700;
+}
+
 @mixin font-small-text {
   @include ltr-spc();
 

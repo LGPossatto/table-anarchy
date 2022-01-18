@@ -12,14 +12,16 @@ const mockInfo = {
     login: "mock login",
   },
   title: "mock title",
+  href: "/",
 };
 
 const renderCard = (title = "") => {
   render(
     <ImgCard
+      profile={mockInfo.profile}
       img={placeholderImg}
       title={title}
-      profile={mockInfo.profile}
+      href={mockInfo.href}
     ></ImgCard>
   );
 };

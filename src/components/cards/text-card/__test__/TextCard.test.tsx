@@ -11,10 +11,17 @@ const mockInfo = {
     login: "mock login",
   },
   desc: "mock desc",
+  href: "/",
 };
 
 const renderCard = (desc = "") => {
-  render(<TextCard desc={desc} profile={mockInfo.profile}></TextCard>);
+  render(
+    <TextCard
+      desc={desc}
+      href={mockInfo.href}
+      profile={mockInfo.profile}
+    ></TextCard>
+  );
 };
 
 describe("ImgCard", () => {

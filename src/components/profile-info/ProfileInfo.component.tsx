@@ -12,8 +12,10 @@ export const ProfileInfo = ({ img, name, login }: props) => {
       <div className="img-box">
         <img src={img} alt="profile" />
       </div>
-      <h3>{name}</h3>
-      <span>{login}</span>
+      <div className="text-box">
+        <h3>{name}</h3>
+        <span>{login}</span>
+      </div>
     </div>
   );
 };

@@ -1,22 +1,37 @@
 import { useState } from "react";
-import { CtaButton } from "./components/buttons/CtaButton.component";
+import { BrowserRouter } from "react-router-dom";
+
+import placeholderImg from "./assets/images/placeholder.jpg";
+import profileImg from "./assets/images/profile.jpg";
+
+import { CtaBtn } from "./components/buttons/cta-btn/CtaBtn.component";
 import { TextInput } from "./components/inputs/text-input/TextInput.component";
+import { ImgCard } from "./components/cards/img-card/ImgCard.component";
 
 function App() {
   const [value, setValue] = useState("");
 
+  const profile = {
+    img: profileImg,
+    name: "mock name",
+    login: "mock login",
+  };
+
   return (
-    <div className="App">
-      <TextInput
-        id={"id"}
-        name={"name"}
-        value={value}
-        setValue={setValue}
-        type="email"
-        placeholder="placeholder"
-      ></TextInput>
-      <CtaButton text={"Button"} onClick={() => console.log("ok")}></CtaButton>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <TextInput
+          id={"id"}
+          name={"name"}
+          value={value}
+          setValue={setValue}
+          type="email"
+          placeholder="placeholder"
+        ></TextInput>
+        <CtaBtn text={"Button"} onClick={() => console.log("ok")}></CtaBtn>
+        <ImgCard img={placeholderImg} href="/" profile={profile}></ImgCard>
+      </div>
+    </BrowserRouter>
   );
 }
 
