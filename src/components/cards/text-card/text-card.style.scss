@@ -1,0 +1,30 @@
+@import "../../../assets/styles/variables.style";
+
+.text-card {
+  overflow: hidden;
+  position: relative;
+
+  padding: 7px;
+  border-radius: 5px;
+  background-color: $color-black;
+
+  &__ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 7px;
+  }
+
+  &__desc {
+    @include font-text();
+
+    margin-top: 75px;
+
+    color: $color-white;
+  }
+}

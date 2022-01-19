@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 
 import placeholderImg from "../../../../assets/images/placeholder.jpg";
@@ -17,12 +18,14 @@ const mockInfo = {
 
 const renderCard = (title = "") => {
   render(
-    <ImgCard
-      profile={mockInfo.profile}
-      img={placeholderImg}
-      title={title}
-      href={mockInfo.href}
-    ></ImgCard>
+    <BrowserRouter>
+      <ImgCard
+        profile={mockInfo.profile}
+        img={placeholderImg}
+        title={title}
+        href={mockInfo.href}
+      ></ImgCard>
+    </BrowserRouter>
   );
 };
 

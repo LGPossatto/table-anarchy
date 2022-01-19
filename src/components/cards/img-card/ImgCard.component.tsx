@@ -17,7 +17,10 @@ export const ImgCard = ({ profile, img, href, title }: props) => {
       <Link to={href} className="img-card__link"></Link>
       <div className="img-card-ribbon">
         <ProfileInfo {...profile}></ProfileInfo>
-        <HeartBtn onClick={() => console.log("heart btn")}></HeartBtn>
+        <HeartBtn
+          active={true}
+          onClick={() => console.log("heart btn")}
+        ></HeartBtn>
       </div>
       <div className="img-card__img">
         <img src={img} alt="post" />

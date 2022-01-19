@@ -3,8 +3,8 @@ import { HeartBtn } from "../HeartBtn.component";
 
 const mockFoo = jest.fn();
 
-const renderBtn = () => {
-  render(<HeartBtn onClick={mockFoo}></HeartBtn>);
+const renderBtn = (active = false) => {
+  render(<HeartBtn active={active} onClick={mockFoo}></HeartBtn>);
 };
 
 describe("HeartBtn", () => {
@@ -18,5 +18,13 @@ describe("HeartBtn", () => {
     fireEvent.click(screen.getByTestId("heart-btn"));
 
     expect(mockFoo).toBeCalled();
+  });
+
+  test("change heart color when active", () => {
+    renderBtn(true);
+
+    expect(
+      screen.getByTestId("heart-btn").classList.contains("heart-btn-active")
+    ).toBe(true);
   });
 });

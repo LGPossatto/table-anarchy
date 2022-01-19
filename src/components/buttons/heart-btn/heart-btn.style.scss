@@ -1,2 +1,55 @@
+@import "../../../assets/styles/variables.style";
+
 .heart-btn {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    & > svg path {
+      fill: $color-white;
+    }
+  }
+
+  & > svg {
+    width: 45px;
+    height: 45px;
+
+    path {
+      transition: fill 0.25s ease-in-out, stroke 0.25s ease-in-out;
+    }
+  }
+
+  & > span {
+    @include font-sub-text();
+
+    display: block;
+    margin-left: 5px;
+
+    color: $color-white;
+    text-shadow: 0px 0px 5px $color-black;
+
+    transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+  }
+
+  &-active {
+    &:hover {
+      & > svg path {
+        fill: $color-red-2;
+        stroke: $color-red-2;
+      }
+    }
+
+    & > svg path {
+      fill: $color-red-1;
+      stroke: $color-red-1;
+    }
+
+    & > span {
+      color: $color-red-1;
+      text-shadow: 0px 0px 5px $color-white;
+    }
+  }
 }

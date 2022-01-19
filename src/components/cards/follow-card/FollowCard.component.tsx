@@ -9,8 +9,12 @@ interface props {
 export const FollowCard = ({ profile }: props) => {
   return (
     <div className="follow-card">
-      <ProfileInfo {...profile}></ProfileInfo>
-      <CtaBtn onClick={() => console.log("follow card")} text="Follow"></CtaBtn>
+      <ProfileInfo big={true} {...profile}></ProfileInfo>
+      <CtaBtn
+        active={true}
+        onClick={() => console.log("follow card")}
+        text="Follow"
+      ></CtaBtn>
     </div>
   );
 };

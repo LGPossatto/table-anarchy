@@ -1,0 +1,10 @@
+@import "../../../assets/styles/variables.style";
+
+.follow-card {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 7px;
+
+  background-color: $color-black;
+}

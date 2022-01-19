@@ -35,4 +35,16 @@
       color: $color-white;
     }
   }
+
+  &-big {
+    & .text-box {
+      h3 {
+        @include font-sub-title();
+      }
+
+      span {
+        @include font-text();
+      }
+    }
+  }
 }

@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
 
 import profileImg from "../../../../assets/images/profile.jpg";
@@ -16,11 +17,13 @@ const mockInfo = {
 
 const renderCard = (desc = "") => {
   render(
-    <TextCard
-      desc={desc}
-      href={mockInfo.href}
-      profile={mockInfo.profile}
-    ></TextCard>
+    <BrowserRouter>
+      <TextCard
+        desc={desc}
+        href={mockInfo.href}
+        profile={mockInfo.profile}
+      ></TextCard>
+    </BrowserRouter>
   );
 };
 

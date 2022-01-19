@@ -12,14 +12,16 @@ interface props {
 
 export const TextCard = ({ profile, desc, href }: props) => {
   return (
-    <div className="img-card">
-      <div className="img-card-ribbon">
+    <div className="text-card">
+      <Link to={href}></Link>
+      <div className="text-card__ribbon">
         <ProfileInfo {...profile}></ProfileInfo>
-        <HeartBtn onClick={() => console.log("heart btn")}></HeartBtn>
+        <HeartBtn
+          active={false}
+          onClick={() => console.log("heart btn")}
+        ></HeartBtn>
       </div>
-      <Link to={href}>
-        <div className="img-card__desc">{desc && <p>{desc}</p>}</div>
-      </Link>
+      <p className="text-card__desc">{desc}</p>
     </div>
   );
 };
