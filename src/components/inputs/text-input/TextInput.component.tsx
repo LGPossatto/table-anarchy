@@ -9,6 +9,7 @@ interface props {
   placeholder?: string;
   required?: boolean;
   errorMessage?: string;
+  noLabel?: boolean;
 }
 
 export const TextInput = ({
@@ -20,6 +21,7 @@ export const TextInput = ({
   placeholder = "",
   required = false,
   errorMessage,
+  noLabel = false,
 }: props) => {
   const handleChange = (value: string) => {
     setValue(value);
@@ -27,7 +29,9 @@ export const TextInput = ({
 
   return (
     <div className="text-input">
-      <label htmlFor={`${id}`}>{name}</label>
+      <label htmlFor={`${id}`} style={{ display: noLabel ? "none" : "block" }}>
+        {name}
+      </label>
       <input
         className={errorMessage ? "error-message" : ""}
         type={type}

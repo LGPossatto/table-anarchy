@@ -1,0 +1,65 @@
+@import "../../../assets/styles/variables.style";
+
+.game-card {
+  overflow: hidden;
+
+  width: 500px;
+  height: 350px;
+  padding: 7px;
+
+  border-radius: 5px;
+
+  background-color: $color-black;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid $color-white;
+  }
+
+  &__bot {
+    display: flex;
+
+    padding-top: 15px;
+
+    .img-box {
+      flex-shrink: 0;
+      overflow: hidden;
+
+      width: 200px;
+      height: 200px;
+
+      border-radius: 5px;
+
+      img {
+        object-fit: cover;
+
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .text-box {
+      margin-left: 7px;
+
+      h2,
+      p {
+        color: $color-white;
+      }
+
+      h2 {
+        @include font-sub-title();
+
+        margin-bottom: 15px;
+      }
+
+      p {
+        @include font-text();
+      }
+    }
+  }
+}

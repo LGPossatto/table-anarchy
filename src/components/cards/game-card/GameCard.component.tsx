@@ -1,5 +1,6 @@
-import { ProfileInfo } from "../../profile-info/ProfileInfo.component";
 import "./game-card.stye.scss";
+import { HeartBtn } from "../../buttons/heart-btn/HeartBtn.component";
+import { ProfileInfo } from "../../profile-info/ProfileInfo.component";
 
 interface props {
   profile: { img: string; name: string; login: string };
@@ -13,6 +14,10 @@ export const GameCard = ({ profile, img, title, desc }: props) => {
     <div className="game-card">
       <div className="game-card__top">
         <ProfileInfo {...profile}></ProfileInfo>
+        <HeartBtn
+          active={false}
+          onClick={() => console.log("gamecard heart")}
+        ></HeartBtn>
       </div>
 
       <div className="game-card__bot">
