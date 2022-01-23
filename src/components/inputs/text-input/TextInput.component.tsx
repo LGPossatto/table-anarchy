@@ -1,3 +1,5 @@
+import { toTitleCase } from "../../../assets/scripts/helpers";
+
 import "./text-input.style.scss";
 
 interface props {
@@ -30,7 +32,7 @@ export const TextInput = ({
   return (
     <div className="text-input">
       <label htmlFor={`${id}`} style={{ display: noLabel ? "none" : "block" }}>
-        {name}
+        {toTitleCase(name)}
       </label>
       <input
         className={errorMessage ? "error-message" : ""}
