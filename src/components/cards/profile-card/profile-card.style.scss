@@ -1,0 +1,51 @@
+@import "../../../assets/styles/variables.style";
+
+.profile-card {
+  overflow: hidden;
+
+  width: 100%;
+  border-radius: 5px;
+
+  background-color: $color-black;
+
+  &__img {
+    width: 100%;
+    height: 22vw;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding: 15px;
+
+    .img-box {
+      overflow: hidden;
+      position: absolute;
+      top: -175px;
+
+      width: 250px;
+      height: 250px;
+
+      border-radius: 5px;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-top: 75px;
+    }
+  }
+}
