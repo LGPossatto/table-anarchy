@@ -12,8 +12,8 @@ function App() {
       {href !== "login" && href !== "signup" && <NavBar></NavBar>}
 
       <Routes>
-        <Route path={"/home"} element={<Home />}></Route>
         <Route path={"/login"} element={<Login />}></Route>
+        <Route path={"/home"} element={<Home />}></Route>
       </Routes>
     </div>
   );
