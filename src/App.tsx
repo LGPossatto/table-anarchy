@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      {false && href !== "login" && href !== "signup" && <NavBar></NavBar>}
+      {href !== "login" && href !== "signup" && <NavBar></NavBar>}
 
       <Routes>
         <Route path={"/home"} element={<Home />}></Route>

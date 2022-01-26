@@ -23,6 +23,7 @@
   &__desc {
     @include font-text();
 
+    margin: 7px;
     margin-top: 75px;
 
     color: $color-white;
